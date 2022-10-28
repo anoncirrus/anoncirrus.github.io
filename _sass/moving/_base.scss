@@ -1,0 +1,409 @@
+.primary_container {
+    width: calc(#{$content-width} - (#{4*$spacing-unit}));
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.align_right {
+    display: flex;
+    display: -webkit-flexbox;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
+
+/**
+ * Reset some basic elements
+ */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+  * Basic styling
+  */
+body {
+    font: $base-font-weight #{$small-font-size}/#{$small-line-height} $base-font-family;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern"1;
+    -moz-font-feature-settings: "kern"1;
+    -o-font-feature-settings: "kern"1;
+    font-feature-settings: "kern"1;
+    font-kerning: normal;
+    display: flex;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 0 0%;
+    overflow: overlay;
+
+    @media screen and (min-width: $on-medium) {
+        padding: 0 0%;
+        font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    }
+}
+
+/**
+  * Set `margin-bottom` to maintain vertical rhythm
+  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+/**
+  * `main` element
+  */
+main {
+    display: block;
+    /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+/**
+  * Divider
+  */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    height: 2px;
+    /* Set the hr color */
+    // color: lighten($grey-color-light, 3%);
+    background-color: var(--text-color);
+
+    /* old IE */
+    /* Modern Browsers */
+    // background: -webkit-linear-gradient(
+    //   left,
+    //   transparent,
+    //   rgba(0, 0, 0, 0.5),
+    //   transparent
+    // );
+    // background: linear-gradient(
+    //   left,
+    //   transparent,
+    //   rgba(0, 0, 0, 0.5),
+    //   transparent
+    // );
+}
+
+/**
+  * Images
+  */
+img {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 2px 2px;
+    border-radius: 6px;
+    background-color: lighten($grey-color-light, 3%);
+    max-width: 100%;
+    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**
+  * Figures
+  */
+figure>img {
+    display: block;
+    align-self: center;
+}
+
+figcaption {
+    font-size: $small-font-size;
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: lighten($grey-color, 20%);
+    text-align: center;
+}
+
+/**
+  * Lists
+  */
+ul,
+ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+
+    >ul,
+    >ol {
+        margin-bottom: 0;
+    }
+}
+
+/**
+  * Headings
+  */
+h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 2rem;
+    font-weight: $base-font-weight;
+}
+
+/**
+  * Links
+  */
+a {
+    color: var(--brand-color);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/**
+  * Blockquotes
+  */
+blockquote {
+    color: var(--text-color);
+    background-color: var(--background-color-lighten-9);
+
+    border-radius: 0.3em;
+
+    border-left: 4px solid var(--brand-color);
+    padding-left: $spacing-unit / 2;
+    @include relative-font-size(1.4);
+    line-height: 34px;
+    padding: 24px;
+    // letter-spacing: -1px;
+
+    @media (max-width: 600px) {
+        @include relative-font-size(1.1);
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+cite {
+    text-align: right;
+    display: block;
+}
+
+/**
+  * Wrapper
+  */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+    @extend %clearfix;
+
+    @media screen and (min-width: $on-large) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+        max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+        padding-right: $spacing-unit;
+        padding-left: $spacing-unit;
+    }
+}
+
+/**
+  * Clearfix
+  */
+%clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/**
+  * Icons
+  */
+
+.orange {
+    color: $orange-color;
+}
+
+.grey {
+    color: $grey-color;
+}
+
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: currentColor;
+    padding: 5px 3px 2px 5px;
+    vertical-align: text-bottom;
+}
+
+/**
+  * Tables
+  */
+table {
+    margin-bottom: $spacing-unit;
+    width: 100%;
+    text-align: $table-text-align;
+    // color: lighten(var(--text-color), 18%);
+    border-collapse: collapse;
+    border: 2px solid var(--text-color);
+
+    tr {
+        &:nth-child(even) {
+            background-color: var(--background-color-lighten-9);
+        }
+    }
+
+    th,
+    td {
+        padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    }
+
+    th {
+        background-color: var(--background-color-lighten-9);
+        border: 2px solid var(--text-color);
+        border-bottom-color: var(--text-color);
+    }
+
+    td {
+        border: 2px solid var(--text-color);
+    }
+}
+
+nav {
+    width: 100%;
+
+    li {
+        display: inline;
+        padding-top: 20px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+}
+
+/* home: post list */
+.post-list ul {
+    margin-left: 0;
+}
+
+.post-list ul li {
+    display: flex;
+}
+
+.post-meta {
+    min-width: 80px;
+    font-size: 21.6px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    padding: 30px;
+}
+
+.flexbox-col {
+    flex-direction: column;
+    flex: 50%;
+    padding: 30px;
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .flexbox {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .flexbox-col {
+        display: flex;
+        text-align: center;
+    }
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--background-color);
+    background: var(--text-color);
+}
+
+::selection {
+    color: var(--background-color);
+    background: var(--text-color);
+}
+
+
+::-webkit-scrollbar {
+    height: 0px;
+    /* height of horizontal scrollbar */
+    width: 10px;
+    /* width of vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--text-color);
+
+    &:hover {
+        background: var(--background-color-lighten-9);
+    }
+}

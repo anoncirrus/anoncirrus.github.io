@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <head>
+    <title>{{ page.title }}</title>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" href="{{ base.url | prepend: site.url }}/assets/css/form.css"> -->
+  </head>
+
+
+  <header class="post-header">
+    <div class="post-back">
+      <a class="black-link" href="{{ site.url | relative_url }}">
+        ← {{ site.moving.back_to }}
+      </a>
+    </div>
+
+    <h1 class="post-title p-name" itemprop="name headline">
+      {{ page.title | escape }}
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished"
+      >
+        {%- assign date_format = "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.author -%} •
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person"
+        ><span class="p-author h-card" itemprop="name">{{
+          page.author | escape
+        }}</span></span
+      >
+      {%- endif -%}
+    </p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+  
+
+  <div class="PageNavigation">
+    {% if page.previous.url %}
+      <a class="button button-prev" href="{{page.previous.url}}" title="{{page.previous.title}}">&laquo; Previous</a>
+    {% endif %}
+    {% if page.next.url %}
+      <a class="button button-next" href="{{page.next.url}}" title="{{page.next.title}}">Next &raquo;</a>
+    {% endif %}
+  </div>
+
+</article>
