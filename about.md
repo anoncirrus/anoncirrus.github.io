@@ -9,4 +9,4 @@ Interested in Web dev more specifically Backend Development and Cloud Architectu
 - Experienced with Linux OS and Bash CLI
 - Skilled in Python, SQL, HTML5, CSS, jQuery 
 - Good knowledge of SQL and experience in working with relational databases
-- Familiar with code production standards and VCS
+- Familiar with code production standards, VCS and CI/CD pipeline
