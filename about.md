@@ -1,10 +1,11 @@
 ---
 layout: about
 ---
-Engineering Graduate Batch of 2020 in electronics and commn., \
-working as Workday Consultant in Accenture providing support for Human Capital Management.
+Engineering Graduate Batch of 2020 in Electronics and Commn.,
 
-Interested in Web dev more specifically Backend Development and Cloud Architecture.
+Working as Workday Consultant in Accenture providing support for Human Capital Management.
+
+Interested in Web dev more specifically Backend Development, Cloud Architecture and DevOps.
 
 - Experienced with Linux OS and Bash CLI
 - Skilled in Python, SQL, HTML5, CSS, jQuery 
