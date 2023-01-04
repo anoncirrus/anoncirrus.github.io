@@ -7,9 +7,6 @@ date: 29-12-2022
 ---
 Lets directly get down to business and get our hands dirty. The intention of this article is to understand the basics not just creating a Django project. There are a lot of tools out there for creating a sample Django project instantly.
 
----
-from scratch 😃
-
 Lets directly get down to business and get our hands dirty. The intention of this article is to understand the basics not just creating a Django project. There are a lot of tools out there for creating a sample Django project instantly.
 
 **Step 1: Create a Virtual Environment**
