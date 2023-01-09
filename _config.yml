@@ -7,7 +7,7 @@ url: "https://anoncirrus.github.io" # this is your site's root address.
 
 
 description: > # this means to ignore newlines until "show_excerpts:" 
-  portfoilio  
+  portfoilio (under construction)
 favicon: "./favicon.ico" # set the favicon of the site 
 
 show_excerpts: false # set to true to show excerpts on the homepage
