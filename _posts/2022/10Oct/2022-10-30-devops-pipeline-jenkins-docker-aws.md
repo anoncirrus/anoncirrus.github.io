@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building CI/CD using Jenkins, AWS, Docker 
+title: Building CI/CD pipeline using Jenkins, AWS, Docker 
 subtitle: getting started
 tags: [devops, AWS, EC2, Jenkins, Docker, GitHub]
 date: 30-10-2022 
@@ -95,7 +95,6 @@ git remote -v
 git remote set-url origin https://github.com/anoncirrus/django-todo.git
 ```
 
-![](../../../assets/images/devops_cicd/m1.png)
 ![](../../../assets/images/devops_cicd/m3.png)
 ![](../../../assets/images/devops_cicd/m2.png)
 
@@ -105,7 +104,7 @@ Created a new job with *Source Code Management* > Git > add *Repository URL* ; s
 
 Since docker file runs the application on port 8000 as instructed in <u>Dockerfile</u>, shell command sto be added are to build and run the docker container.
 
-Add *Build Steps* > *Execute shell* and commands
+Add *Build Steps* > *Execute shell* and commands: (since new job created for Integration too, changed the port in Dockerfile from 8001 to 8000 midway)
 
 ```
 sudo docker build . -t todo-app
