@@ -2,6 +2,6 @@
 layout: post
 title: Web App Development using Django
 subtitle: for more
-tags: [django, python, MVT, SDLC]
-date: 20-12-2022 
+tags: [django]
+date: 11-12-2022 
 ---

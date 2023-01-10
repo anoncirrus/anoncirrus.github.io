@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Developed test cases using Cucumber on Selenium
-subtitle: 
-tags: [cucumber, selenium, BDD, TDD, POM, Gherkin]
+subtitle: for more
+tags: []
 date: 11-12-2022 
 ---
